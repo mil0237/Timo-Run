@@ -12,6 +12,7 @@ pygame.display.set_caption('Timo Run')
 MAX_WIDTH = 800
 MAX_HEIGHT = 400
 
+
 #소리 로드
 pygame.mixer.init()
 bgm_sound = pygame.mixer.Sound('sounds/bgm.wav')
@@ -19,7 +20,7 @@ jump_sound= pygame.mixer.Sound('sounds/JumpSound.wav')
 gameover_sound= pygame.mixer.Sound('sounds/gameover.wav')
 
 def main():
-    os.chdir('C:/Users/user/Desktop/TimoRun')
+    os.chdir('C:/Users/user/Desktop/TimoRun/Timo-Run')
     # set screen, fps
     screen = pygame.display.set_mode((MAX_WIDTH, MAX_HEIGHT))
     fps = pygame.time.Clock()
