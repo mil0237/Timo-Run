@@ -62,7 +62,7 @@ def main():
    # mushroom_x = MAX_WIDTH
    # mushroom_y = MAX_HEIGHT - mushroom_height
     mushroom_spawn_interval = random.randint(800, 2000)
-    mushroom_speed = 12
+    mushroom_speed = 11
     mushroom_spawn_rate = 1
     last_spawn_increase_time = pygame.time.get_ticks()
     
@@ -137,7 +137,7 @@ def main():
         if is_go_up:
             timo_y -= 13.0
         elif not is_go_up and not is_bottom:
-            timo_y += 12.0
+            timo_y += 13.0
 
         # timo top and bottom check
         if is_go_up and timo_y <= jump_top:
@@ -152,8 +152,8 @@ def main():
         # mushroom move
         current_time = pygame.time.get_ticks()
         if current_time - last_spawn_increase_time >=10000:
-            mushroom_spawn_rate *= 1.8
-            mushroom_speed *= 1.2
+            mushroom_spawn_rate *= 1.6
+            mushroom_speed *= 1.3
             current_background_index = (current_background_index +1)%len(backgrounds)
             last_spawn_increase_time = current_time
             
